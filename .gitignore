@@ -467,6 +467,5 @@ crashlytics-build.properties
 
 # Unity
 
-*.meta
 .vscode
 .project

@@ -1,4 +1,4 @@
-<run wipe-db="true">
+<run wipe-db="false">
     <nodes>
         <config src="node-config.properties" add-signers="true" />
         <test-config src="node-config-test.properties"/>

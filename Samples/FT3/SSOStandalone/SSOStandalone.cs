@@ -5,6 +5,7 @@ using System;
 
 public class SSOStandalone : MonoBehaviour
 {
+    [SerializeField] private string _blockchainRID;
     [SerializeField] private string _baseURL;
     [SerializeField] private string _vaultUrl;
     [SerializeField] private string _successUrl;
@@ -28,7 +29,7 @@ public class SSOStandalone : MonoBehaviour
     private IEnumerator ConnectToBlockchain()
     {
         Postchain postchain = new Postchain(_baseURL);
-        yield return postchain.Blockchain(1, SetBlockchain, DefaultErrorHandler);
+        yield return postchain.Blockchain(_blockchainRID, SetBlockchain, DefaultErrorHandler);
     }
 
     private void SetBlockchain(Blockchain blockchain)
