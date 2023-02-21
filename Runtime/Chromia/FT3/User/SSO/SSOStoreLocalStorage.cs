@@ -23,12 +23,6 @@ namespace Chromia.Postchain.Ft3
 
         [DllImport("__Internal")]
         public static extern void CloseWindow();
-
-        [DllImport("__Internal")]
-        public static extern void SetCleanUrl(string key);
-
-        [DllImport("__Internal")]
-        public static extern void SetUrlAndReload(string key);
     }
 #endif
 
@@ -51,7 +45,7 @@ namespace Chromia.Postchain.Ft3
             {
                 result = SSOStoreWebgl.LoadFromLocalStorage(STORAGEKEY);
             }
-#elif UNITY_STANDALONE  || UNITY_ANDROID
+#elif UNITY_STANDALONE
             FileManager.LoadFromFile(FILENAME, out result);
 #endif
             if (!String.IsNullOrEmpty(result))
@@ -69,7 +63,7 @@ namespace Chromia.Postchain.Ft3
             string data = JsonConvert.SerializeObject(SSOData, Formatting.Indented);
 #if UNITY_WEBGL
             SSOStoreWebgl.SaveToLocalStorage(STORAGEKEY, data);
-#elif UNITY_STANDALONE || UNITY_ANDROID
+#elif UNITY_STANDALONE
             FileManager.WriteToFile(FILENAME, data);
 #endif
         }
