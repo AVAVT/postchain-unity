@@ -1,6 +1,6 @@
 {
     "name": "com.chromia.postchain-unity",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "displayName": "Rell SDK",
     "description": "This is an example package",
     "unity": "2020.3",
@@ -8,7 +8,9 @@
     "documentationUrl": "https://github.com/Cherden/postchain-unity-webgl/wiki",
     "changelogUrl": "https://github.com/Cherden/postchain-unity-webgl",
     "licensesUrl": "https://github.com/Cherden/postchain-unity-webgl",
-    "dependencies": {},
+    "dependencies": {
+        "com.unity.modules.jsonserialize": "1.0.0"
+    },
     "keywords": [
         "Chromia",
         "Rell",

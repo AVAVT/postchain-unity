@@ -6,20 +6,13 @@ This Unity package offers an API for the Chromia Blockchain. It includes normal 
 
 Currently tested with Standalone (Windows and Linux) as well as WebGL builds.
 
-## Examples
+# Installation additional step
 
-### Postchain
-See `Samples/Postchain/` for a demo scene.
+After adding this package into the project via UPM, copy `Runtime/link.xml` inside the package to your project, or update your project's `link.xml` and add `ChromiaAssembly` to list of preserved assemblies.
 
-### FT3
-See `Tests/AccountTest` for register and login.
+This step is to prevent Unity's from stripping `JsonConstructor`s from the package.
 
-### SSO
-See `Samples/FT3/SSO*` for demo scenes.
-
-## Test
-
-Run the rell code defined in `Samples/FT3/rell` and use Unity's internal test suite.
+For more information about link.xml and Unity code stripping: https://docs.unity3d.com/Manual/ManagedCodeStripping.html
 
 ## Support
 
